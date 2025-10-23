@@ -3,399 +3,208 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Configuración de Midori</title>
-        <!-- Vinculamos el archivo CSS -->
+        <title>Personaliza tu Navegador</title>
         <link rel="stylesheet" href="style.css" />
-        <!-- El logo de Midori se carga aquí -->
-        <link
-            rel="icon"
-            href="https://midori-browser.org/favicon.ico"
-            type="image/x-icon"
-        />
     </head>
     <body>
-        <!-- Contenedor principal de la aplicación -->
-        <div class="app-container">
-            <!-- Encabezado con el logo y título -->
-            <header class="app-header">
-                <div class="logo-container">
-                    <!-- Logo de Midori -->
-                    <div class="midori-logo">M</div>
+        <!-- Contenedor principal de la configuración -->
+        <div class="setup-container">
+            <!-- Paso 1: Bienvenida -->
+            <div class="step active" id="step1">
+                <div class="logo">
+                    <img src="./assets/Midori Logo.svg" alt="Logo" />
                 </div>
-                <h1 class="app-title">¡Le damos la bienvenida a Midori!</h1>
-                <p class="app-subtitle">
-                    Midori es un navegador ligero y seguro comprometido con la
-                    privacidad y seguridad del usuario.
+                <h1>¡Te damos la bienvenida!</h1>
+                <p>
+                    Un navegador rápido, ligero y seguro comprometido con tu
+                    privacidad y seguridad.
                 </p>
-            </header>
-
-            <!-- Contenido principal: las pantallas de configuración -->
-            <main class="main-content">
-                <!-- Pantalla 1: Elección de plantilla -->
-                <section id="screen1" class="setup-screen active">
-                    <h2 class="screen-title">Elija una plantilla</h2>
-                    <div class="template-options">
-                        <!-- Opción Básico -->
-                        <div class="template-card" data-template="basic">
-                            <div class="template-icon basic-icon">🌸</div>
-                            <h3>Básico</h3>
-                            <p>
-                                Activa las funciones y ajustes básicos para
-                                disfrutar de una experiencia sencilla.
-                            </p>
-                            <button class="select-btn">Seleccionar</button>
-                        </div>
-                        <!-- Opción Predeterminado -->
-                        <div class="template-card" data-template="default">
-                            <div class="template-icon default-icon">⚙️</div>
-                            <h3>Predeterminado</h3>
-                            <p>
-                                Habilita funciones y ajustes adicionales para
-                                disfrutar de una mejor experiencia.
-                            </p>
-                            <button class="select-btn">Seleccionar</button>
-                        </div>
-                        <!-- Opción Avanzado -->
-                        <div class="template-card" data-template="advanced">
-                            <div class="template-icon advanced-icon">🚀</div>
-                            <h3>Avanzado</h3>
-                            <p>
-                                Habilitar funciones y ajustes avanzados.
-                                Recomendado para usuarios con experiencia.
-                            </p>
-                            <button class="select-btn">Seleccionar</button>
-                        </div>
-                    </div>
-                    <!-- Botón Siguiente -->
-                    <button id="nextBtn1" class="nav-btn next-btn">
-                        Siguiente
-                    </button>
-                    <!-- Botón Omitir -->
-                    <button id="skipSetupBtn" class="nav-btn skip-btn">
-                        Omitir configuración
-                    </button>
-                </section>
-
-                <!-- Pantalla 2: Selección de diseño del navegador -->
-                <section id="screen2" class="setup-screen">
-                    <h2 class="screen-title">
-                        Seleccione un diseño del navegador
-                    </h2>
-                    <p class="screen-description">
-                        Puede elegir uno de los maravillosos diseños Midori. Los
-                        diseños específicos para cada sistema operativo también
-                        están disponibles en Preferencias.
-                    </p>
-                    <div class="design-options">
-                        <!-- Diseño 1 -->
-                        <div class="design-card" data-design="lepton">
-                            <div class="design-preview">
-                                <div class="browser-bar">
-                                    <div class="tab"></div>
-                                    <div class="tab active"></div>
-                                    <div class="tab"></div>
-                                </div>
-                                <div class="content-area"></div>
-                            </div>
-                            <p>Diseño original de Lepton</p>
-                        </div>
-                        <!-- Diseño 2 -->
-                        <div class="design-card" data-design="photon">
-                            <div class="design-preview">
-                                <div class="browser-bar">
-                                    <div class="tab"></div>
-                                    <div class="tab active"></div>
-                                    <div class="tab"></div>
-                                </div>
-                                <div class="content-area"></div>
-                            </div>
-                            <p>Diseño de Lepton Photon</p>
-                        </div>
-                        <!-- Diseño 3 -->
-                        <div class="design-card" data-design="protonfix">
-                            <div class="design-preview">
-                                <div class="browser-bar">
-                                    <div class="tab"></div>
-                                    <div class="tab active"></div>
-                                    <div class="tab"></div>
-                                </div>
-                                <div class="content-area"></div>
-                            </div>
-                            <p>Diseño ProtonFix de Lepton</p>
-                        </div>
-                        <!-- Diseño 4 -->
-                        <div class="design-card" data-design="floral">
-                            <div class="design-preview">
-                                <div class="browser-bar">
-                                    <div class="tab"></div>
-                                    <div class="tab active"></div>
-                                    <div class="tab"></div>
-                                </div>
-                                <div class="content-area"></div>
-                            </div>
-                            <p>Diseño Fluerial de Midori</p>
-                        </div>
-                        <!-- Diseño 5 -->
-                        <div class="design-card" data-design="firefox">
-                            <div class="design-preview">
-                                <div class="browser-bar">
-                                    <div class="tab"></div>
-                                    <div class="tab active"></div>
-                                    <div class="tab"></div>
-                                </div>
-                                <div class="content-area"></div>
-                            </div>
-                            <p>Diseño de Firefox Proton</p>
-                        </div>
-                    </div>
-                    <!-- Botón Siguiente -->
-                    <button id="nextBtn2" class="nav-btn next-btn">
-                        Siguiente
-                    </button>
-                </section>
-
-                <!-- Pantalla 3: Personalización de Edge (estilo) -->
-                <section id="screen3" class="setup-screen">
-                    <h2 class="screen-title">
-                        Personalice Midori para que coincida con su estilo
-                    </h2>
-
-                    <!-- Selector de tema -->
-                    <div class="theme-selector">
-                        <button class="theme-btn active" data-theme="system">
-                            <svg
-                                width="16"
-                                height="16"
-                                viewBox="0 0 16 16"
-                                fill="currentColor"
-                            >
-                                <rect x="4" y="4" width="8" height="8" rx="1" />
-                            </svg>
-                            Sistema
-                        </button>
-                        <button class="theme-btn" data-theme="light">
-                            <svg
-                                width="16"
-                                height="16"
-                                viewBox="0 0 16 16"
-                                fill="currentColor"
-                            >
-                                <circle cx="8" cy="8" r="4" />
-                            </svg>
-                            Claro
-                        </button>
-                        <button class="theme-btn" data-theme="dark">
-                            <svg
-                                width="16"
-                                height="16"
-                                viewBox="0 0 16 16"
-                                fill="currentColor"
-                            >
-                                <path
-                                    d="M8 2C5.24 2 3 4.24 3 7c0 2.76 2.24 5 5 5s5-2.24 5-5c0-2.76-2.24-5-5-5z"
-                                />
-                            </svg>
-                            Oscuro
-                        </button>
-                    </div>
-
-                    <!-- Paleta de colores -->
-                    <div class="color-palette">
-                        <div
-                            class="color-option color-white"
-                            data-color="white"
-                        ></div>
-                        <div
-                            class="color-option color-lightblue"
-                            data-color="lightblue"
-                        ></div>
-                        <div
-                            class="color-option color-teal"
-                            data-color="teal"
-                        ></div>
-                        <div
-                            class="color-option color-blue"
-                            data-color="blue"
-                        ></div>
-                        <div
-                            class="color-option color-pink"
-                            data-color="pink"
-                        ></div>
-                        <div
-                            class="color-option color-yellow"
-                            data-color="yellow"
-                        ></div>
-                        <div
-                            class="color-option color-orange"
-                            data-color="orange"
-                        ></div>
-                        <div
-                            class="color-option color-darkgray"
-                            data-color="darkgray"
-                        ></div>
-                        <div
-                            class="color-option color-gray"
-                            data-color="gray"
-                        ></div>
-                        <div
-                            class="color-option color-navy"
-                            data-color="navy"
-                        ></div>
-                        <div
-                            class="color-option color-purple"
-                            data-color="purple"
-                        ></div>
-                        <div
-                            class="color-option color-red"
-                            data-color="red"
-                        ></div>
-                        <div
-                            class="color-option color-green"
-                            data-color="green"
-                        ></div>
-                        <div
-                            class="color-option color-custom"
-                            data-color="custom"
-                        ></div>
-                    </div>
-
-                    <!-- Vista previa del navegador -->
-                    <div class="preview-container">
-                        <div class="preview-header">
-                            <div class="preview-tab">Nueva pestaña</div>
-                            <div class="preview-controls">
-                                <div class="preview-button">—</div>
-                                <div class="preview-button">□</div>
-                                <div class="preview-button">✕</div>
-                            </div>
-                        </div>
-                        <div class="preview-tabs">
-                            <div class="preview-tab active">
-                                Microsoft Start
-                            </div>
-                            <div class="preview-tab">Nueva pestaña</div>
-                        </div>
-                        <div class="preview-content">
-                            <div class="sidebar">
-                                <div class="sidebar-item"></div>
-                                <div class="sidebar-item"></div>
-                                <div class="sidebar-item"></div>
-                            </div>
-                            <div class="main-content-area">
-                                <div class="start-page">
-                                    <div class="start-logo">M</div>
-                                    <div class="start-info">
-                                        <div class="weather">☀️ 70°</div>
-                                        <div class="icons">
-                                            <div class="icon">🏆</div>
-                                            <div class="icon">🔔</div>
-                                            <div class="icon">⚙️</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Indicador de pasos horizontal -->
-                    <div class="step-indicator">
-                        <div class="step-dot active"></div>
-                        <div class="step-dot"></div>
-                        <div class="step-dot"></div>
-                    </div>
-
-                    <!-- Botón Continuar -->
-                    <button id="continueBtn3" class="nav-btn continue-btn">
-                        Continuar
-                    </button>
-                </section>
-
-                <!-- Pantalla 4: Pin de sitios favoritos -->
-                <section id="screen4" class="setup-screen">
-                    <h2 class="screen-title">
-                        Pin your favorite sites to the taskbar
-                    </h2>
-                    <div class="favorites-grid">
-                        <!-- Sitio 1 -->
-                        <div class="favorite-item" data-site="youtube">
-                            <div class="site-icon">📺</div>
-                            <p>YouTube</p>
-                            <div class="pin-toggle">○</div>
-                        </div>
-                        <!-- Sitio 2 -->
-                        <div class="favorite-item" data-site="netflix">
-                            <div class="site-icon">🎬</div>
-                            <p>Netflix</p>
-                            <div class="pin-toggle">○</div>
-                        </div>
-                        <!-- Sitio 3 -->
-                        <div class="favorite-item" data-site="facebook">
-                            <div class="site-icon">📘</div>
-                            <p>Facebook</p>
-                            <div class="pin-toggle">○</div>
-                        </div>
-                        <!-- Sitio 4 -->
-                        <div class="favorite-item" data-site="nextdoor">
-                            <div class="site-icon">🏘️</div>
-                            <p>Nextdoor</p>
-                            <div class="pin-toggle">○</div>
-                        </div>
-                        <!-- Sitio 5 -->
-                        <div class="favorite-item" data-site="instagram">
-                            <div class="site-icon">📸</div>
-                            <p>Instagram</p>
-                            <div class="pin-toggle">○</div>
-                        </div>
-                        <!-- Sitio 6 -->
-                        <div class="favorite-item" data-site="ebay">
-                            <div class="site-icon">🛍️</div>
-                            <p>ebay</p>
-                            <div class="pin-toggle">○</div>
-                        </div>
-                        <!-- Sitio 7 -->
-                        <div class="favorite-item" data-site="amazon">
-                            <div class="site-icon">📦</div>
-                            <p>Amazon</p>
-                            <div class="pin-toggle">○</div>
-                        </div>
-                        <!-- Sitio 8 -->
-                        <div class="favorite-item" data-site="walmart">
-                            <div class="site-icon">🛒</div>
-                            <p>Walmart</p>
-                            <div class="pin-toggle">○</div>
-                        </div>
-                        <!-- Sitio 9 -->
-                        <div class="favorite-item" data-site="roblox">
-                            <div class="site-icon">🎮</div>
-                            <p>Roblox</p>
-                            <div class="pin-toggle">○</div>
-                        </div>
-                        <!-- Sitio 10 -->
-                        <div class="favorite-item" data-site="outlook">
-                            <div class="site-icon">📧</div>
-                            <p>Outlook</p>
-                            <div class="pin-toggle">○</div>
-                        </div>
-                    </div>
-                    <!-- Botón Finalizar -->
-                    <button id="finishBtn" class="nav-btn finish-btn">
-                        Finish
-                    </button>
-                </section>
-            </main>
-
-            <!-- Pie de página con enlaces de acción final -->
-            <footer class="app-footer">
-                <button id="diveInBtn" class="action-btn">
+                <button class="btn-primary" data-step="2">
                     ¿Listo para sumergirte?
                 </button>
-                <button id="skipBtn" class="action-btn skip-btn">
-                    Omitir para empezar a navegar
-                </button>
-            </footer>
+                <a href="#" class="skip-setup">Omitir para empezar a navegar</a>
+            </div>
+
+            <!-- Paso 2: Importar Datos -->
+            <div class="step" id="step2">
+                <h2>Importar tus datos</h2>
+                <p>
+                    Empieza donde lo dejaste. Selecciona un navegador para
+                    importar tus marcadores, contraseñas e historial.
+                </p>
+
+                <div class="import-options">
+                    <div class="import-option" data-source="chrome">
+                        <div class="import-logo">
+                            <img
+                                src="./assets/google.png"
+                                alt="Google Chrome"
+                            />
+                        </div>
+                        <span>Google Chrome</span>
+                    </div>
+                    <div class="import-option" data-source="opera">
+                        <div class="import-logo">
+                            <img src="./assets/opera.png" alt="Opera" />
+                        </div>
+                        <span>Opera</span>
+                    </div>
+                    <div class="import-option" data-source="edge">
+                        <div class="import-logo">
+                            <img src="./assets/edge.png" alt="Microsoft Edge" />
+                        </div>
+                        <span>Microsoft Edge</span>
+                    </div>
+                    <div class="import-option" data-source="file">
+                        <div class="import-logo">📄</div>
+                        <span>Importar archivo</span>
+                    </div>
+                </div>
+
+                <p class="description">
+                    Puedes omitir este paso y hacerlo más tarde desde la
+                    configuración.
+                </p>
+
+                <div class="navigation-buttons">
+                    <button class="btn-secondary" data-step="1">Atrás</button>
+                    <button class="btn-primary" data-step="3">Continuar</button>
+                </div>
+            </div>
+
+            <!-- Paso 3: Apariencia (Tema y Color) - CORREGIDO -->
+            <div class="step" id="step3">
+                <h2>Personaliza la apariencia</h2>
+                <p>Elige cómo se ve tu navegador.</p>
+
+                <!-- Selector de Tema -->
+                <div class="option-group">
+                    <label>Tema</label>
+                    <div class="theme-switcher">
+                        <button data-theme="system" class="active">
+                            Sistema
+                        </button>
+                        <button data-theme="light">Claro</button>
+                        <button data-theme="dark">Oscuro</button>
+                    </div>
+                </div>
+
+                <!-- Selector de Color de Acento (RESTAURADO) -->
+                <div class="option-group">
+                    <label>Color de Acento</label>
+                    <div class="color-palette">
+                        <div
+                            class="color-dot active"
+                            style="background: #4caf50"
+                            data-color="#4CAF50"
+                        ></div>
+                        <div
+                            class="color-dot"
+                            style="background: #2196f3"
+                            data-color="#2196F3"
+                        ></div>
+                        <div
+                            class="color-dot"
+                            style="background: #f44336"
+                            data-color="#f44336"
+                        ></div>
+                        <div
+                            class="color-dot"
+                            style="background: #ff9800"
+                            data-color="#ff9800"
+                        ></div>
+                        <div
+                            class="color-dot"
+                            style="background: #9c27b0"
+                            data-color="#9c27b0"
+                        ></div>
+                        <div
+                            class="color-dot"
+                            style="background: #795548"
+                            data-color="#795548"
+                        ></div>
+                    </div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button class="btn-secondary" data-step="2">Atrás</button>
+                    <button class="btn-primary" data-step="4">Continuar</button>
+                </div>
+            </div>
+
+            <!-- Paso 4: Diseño y Funcionalidad - CORREGIDO -->
+            <div class="step" id="step4">
+                <h2>Elige tu diseño</h2>
+                <p>Define cómo se organizan las pestañas y el contenido.</p>
+
+                <!-- Layout de Pestañas con Vistas Previas (RESTAURADO) -->
+                <div class="option-group">
+                    <label>Disposición de pestañas</label>
+                    <div class="layout-selector">
+                        <div
+                            class="layout-option active"
+                            data-layout="horizontal"
+                        >
+                            <div class="preview horizontal-preview"></div>
+                            <span>Horizontal</span>
+                        </div>
+                        <div class="layout-option" data-layout="vertical">
+                            <div class="preview vertical-preview"></div>
+                            <span>Vertical</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feed de Noticias -->
+                <div class="option-group">
+                    <label>Feed de noticias preferido</label>
+                    <div class="layout-selector">
+                        <div class="layout-option active" data-feed="off">
+                            <span>Apagado</span>
+                        </div>
+                        <div class="layout-option" data-feed="headings">
+                            <span>Solo títulos</span>
+                        </div>
+                        <div class="layout-option" data-feed="full">
+                            <span>Página completa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button class="btn-secondary" data-step="3">Atrás</button>
+                    <button class="btn-primary" data-step="5">Continuar</button>
+                </div>
+            </div>
+
+            <!-- Paso 5: Privacidad y Extras - CORREGIDO -->
+            <div class="step" id="step5">
+                <h2>Privacidad y seguridad</h2>
+                <p>Toma el control de tu experiencia de navegación.</p>
+
+                <!-- Activar Adblocker con Toggle Switch (RESTAURADO) -->
+                <div class="option-group">
+                    <label for="adblock-toggle">Bloqueador de anuncios</label>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="adblock-toggle" checked />
+                        <label for="adblock-toggle"></label>
+                    </div>
+                    <p class="description">
+                        Bloquea anuncios y rastreadores para una navegación más
+                        rápida y privada.
+                    </p>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button class="btn-secondary" data-step="4">Atrás</button>
+                    <button class="btn-finish">Finalizar</button>
+                </div>
+            </div>
         </div>
 
-        <!-- Vinculamos el archivo JavaScript -->
+        <!-- Contenedor para notificaciones Toast -->
+        <div id="toast-container"></div>
+
         <script src="script.js"></script>
     </body>
 </html>
